@@ -8,7 +8,11 @@ function Form(){
             <h1>Meu cadatro</h1>
             <form onSubmit={Enviar}>
                 <div>
+                    <label htmlfor=''></label>
                     <input type="text" placeholder="Digite seu nome"></input>
+                </div>
+                <div>
+                    <input type='password' placeholder='Digite sua senha'></input>
                 </div>
                 <div>
                     <input type="submit"></input>
