@@ -1,5 +1,6 @@
 function Form(){
-    function Enviar(){
+    function Enviar(event){
+        event.preventDefault()
         console.log('Cadastrou usuário!')
     }
     return(
