@@ -1,6 +1,6 @@
-function Evento(){
+function Evento({numero}){
     function MeuEvento(){
-        console.log("Ola, Rusthen!")
+        console.log(` Olá , Rusthen ${numero}`)
     }
     return(
         <>
