@@ -12,3 +12,8 @@ Pessoa.propTypes ={
     nome:Proptypes.string,
     profissão:Proptypes.string
 }
+Pessoa.defaultProps ={
+    idade:0,
+    nome:'Faltou nome',
+    profissão:'faltou profissão'
+}
