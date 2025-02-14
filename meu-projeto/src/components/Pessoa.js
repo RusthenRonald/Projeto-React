@@ -6,3 +6,9 @@ function Pessoa({nome,idade,profissão}){
         </>
     )
 } export default Pessoa
+
+Pessoa.propTypes ={
+    idade:Proptypes.number,
+    nome:Proptypes.string,
+    profissão:Proptypes.string
+}
