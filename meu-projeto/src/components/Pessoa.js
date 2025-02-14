@@ -1,3 +1,4 @@
+import Proptypes from 'prop-types'
 function Pessoa({nome,idade,profissão}){
     return( 
         <>
