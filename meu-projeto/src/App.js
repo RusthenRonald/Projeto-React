@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="App">
         <h1>Testando Eventos</h1>
-        <Evento2/>
+        <Evento2 numero={1}/>
+        <Evento2 numero={2}/>
     </div>
   );
 }
