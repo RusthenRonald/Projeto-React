@@ -2,7 +2,8 @@ function Form2(){
     return(
         <>
             <div>
-                <input type='text' placeholder='Digite seu nome'></input> 
+                <label htmlFor='text'>Nome</label>
+                <input type='text' placeholder='Digite seu nome' id='text'></input> 
             </div>
             <div>
                 <label htmlFor='password'>Senha</label>
