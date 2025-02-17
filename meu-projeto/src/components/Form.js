@@ -3,9 +3,14 @@ import {useState} from 'react'
 function Form(){
     function Enviar(event){
         event.preventDefault()
+        console.log(name)
         console.log('Cadastrou usuário!')
     }
 
+    function Mudanca(e){
+        setName(e.target.value)
+    }
+    const [name,setName]=useState()
 
     return(
         <div>
@@ -13,7 +18,7 @@ function Form(){
             <form onSubmit={Enviar}>
                 <div>
                     <label htmlFor='name'>Name:</label>
-                    <input type="text" placeholder="Digite seu nome" id='name'></input>
+                    <input type="text" placeholder="Digite seu nome" id='name' onChange={Mudanca}></input>
                 </div>
                 <div>
                     <label htmlFor="password">Senha:</label>
