@@ -4,6 +4,7 @@ function Form(){
     function Enviar(event){
         event.preventDefault()
         console.log(name)
+        console.log(password)
         console.log('Cadastrou usuário!')
     }
 
@@ -11,6 +12,7 @@ function Form(){
         setName(e.target.value)
     }
     const [name,setName]=useState('rusthen')
+    const [password,setPassword]=useState()
 
     return(
         <div>
@@ -22,7 +24,7 @@ function Form(){
                 </div>
                 <div>
                     <label htmlFor="password">Senha:</label>
-                    <input type='password' placeholder='Digite sua senha' id='password'></input>
+                    <input type='password' placeholder='Digite sua senha' id='password' onChange={(e)=>setPassword(e.target.value)}></input>
                 </div>
                 <div>
                     <input type="submit"></input>
