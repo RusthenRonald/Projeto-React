@@ -1,14 +1,10 @@
-import {useState} from 'react'
+
 
 function Form(){
     function Enviar(event){
         event.preventDefault()
         console.log('Cadastrou usuário!')
     }
-
-    const {name,setName} = useState{}
-
-
     return(
         <div>
             <h1>Meu cadatro</h1>
