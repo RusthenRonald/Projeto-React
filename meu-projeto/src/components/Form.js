@@ -10,7 +10,7 @@ function Form(){
     function Mudanca(e){
         setName(e.target.value)
     }
-    const [name,setName]=useState()
+    const [name,setName]=useState('rusthen')
 
     return(
         <div>
@@ -18,7 +18,7 @@ function Form(){
             <form onSubmit={Enviar}>
                 <div>
                     <label htmlFor='name'>Name:</label>
-                    <input type="text" placeholder="Digite seu nome" id='name' onChange={Mudanca}></input>
+                    <input type="text" placeholder="Digite seu nome" id='name' onChange={Mudanca} ></input>
                 </div>
                 <div>
                     <label htmlFor="password">Senha:</label>
