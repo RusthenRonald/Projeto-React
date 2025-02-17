@@ -1,6 +1,6 @@
-function Evento2(){
+function Evento2(props){
     function meuEvento2(){
-        console.log('Olá, rusthen!')
+        console.log(`Olá, Rusthen! ${props.numero}`)
     }
     return(
         <div>
