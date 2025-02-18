@@ -1,3 +1,4 @@
+import Button from "./evento/Button"
 function Evento({numero}){
     function MeuEvento(){
         console.log(` Olá , Rusthen ${numero}`)
@@ -5,7 +6,7 @@ function Evento({numero}){
     return(
         <>
             <p>Clique para ativar o Evento</p>
-            <button onClick={MeuEvento}>Ativar!</button>
+            <Button event={MeuEvento} text='primeiro evento'></Button>
         </>
     )
 } export default Evento
