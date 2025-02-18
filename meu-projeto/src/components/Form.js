@@ -1,7 +1,8 @@
-
+import {useState} from 'react'
 
 function Form(){
-    function Enviar(){
+    function Enviar(e){
+        e.preventDefault()
         console.log('Cadastrou usuário!')
     }
     return(
