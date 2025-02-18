@@ -5,6 +5,9 @@ function Form(){
         e.preventDefault()
         console.log('Cadastrou usuário!')
     }
+
+    const [name,setName] =useState()
+
     return(
         <div>
             <h1>Meu cadatro</h1>
