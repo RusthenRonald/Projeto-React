@@ -3,12 +3,15 @@ import {useState} from 'react'
 function Form(){
     function Enviar(e){
         e.preventDefault()
+        console.log(name)
+        console.log(password)
         console.log('Cadastrou usuário!')
     }
 
     const [name,setName] =useState()
-    function Mudanca(){
-        
+    const [password,setPassword]=useState()
+    function Mudanca(e){
+       setName( e.target.value)
     }
     return(
         <div>
@@ -20,7 +23,7 @@ function Form(){
                 </div>
                 <div>
                     <label htmlFor="password">Senha:</label>
-                    <input type='password' placeholder='Digite sua senha' id='password'></input>
+                    <input type='password' placeholder='Digite sua senha' id='password' onChange={(e)=> setPassword(e.target.value)}></input>
                 </div>
                 <div>
                     <input type="submit"></input>
