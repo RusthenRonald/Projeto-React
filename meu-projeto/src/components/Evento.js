@@ -1,7 +1,7 @@
 import Button from "./evento/Button"
 function Evento(){
     function MeuEvento(){
-        console.log(` Olá , Rusthen`)
+        console.log(`Primeiro Evento!`)
     }
     return(
         <>
