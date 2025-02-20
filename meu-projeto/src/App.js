@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 function App() {
 
-  const meusItens = ['React' ,'Vue' ,'Angular']
+  const meusItens =['React','Vue','Angular']
 
   return (
     <div className="App">
