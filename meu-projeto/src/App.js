@@ -9,6 +9,7 @@ function App() {
     <div className="App">
         <h1>Renderização de Listas</h1>
         <Lista itens={minhalista}/>
+        <Lista itens={[]}/>
     </div>
   );
 }
