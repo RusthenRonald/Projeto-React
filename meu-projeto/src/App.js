@@ -9,7 +9,8 @@ function App() {
   return (
     <div className="App">
         <h1>State Lift</h1>
-        <SeuNome/>
+        <SeuNome setNome={setNome}/>
+        {nome}
     </div>
   );
 }
