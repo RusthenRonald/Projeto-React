@@ -3,8 +3,8 @@ function Lista ({itens}){
         <div>
             <h3>Lista de coisas boas</h3>
             {itens.length>0 ? (
-                itens.map((itens,index)=>(
-                    <p key={index}>{itens}</p>
+                itens.map((item,index)=>(
+                    <p key={index}>{item}</p>
                 ))) : (
                     <p>nenhum item na lista</p>
                 )
