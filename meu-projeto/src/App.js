@@ -4,22 +4,12 @@ import './App.css';
 import Home from './components/Pages/Home';
 import Empresa from './components/Pages/Empresa';
 import Contato from './components/Pages/Contato';
+import Navbar from './components/NavBar';
 function App() {
 
   return (
     <Router>
-      <ul>
-        <Link to='/'>
-          <li>Home</li>
-        </Link>
-        <Link to='/Empresa'>
-          <li>Empresa</li>
-        </Link>
-        <Link to='Contato'>
-          <li>Contato</li>
-        </Link>
-      </ul>
-
+      <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Empresa' element={<Empresa/>}></Route>
