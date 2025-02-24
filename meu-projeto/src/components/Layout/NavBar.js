@@ -2,15 +2,15 @@ import styles from './NavBar.module.css'
 import {Link} from 'react-router-dom'
 function Navbar(){
     return(
-        <ul>
+        <ul className={styles.list}>
         <Link to='/'>
-          <li>Home</li>
+          <li className={styles.item}>Home</li>
         </Link>
         <Link to='/Empresa'>
-          <li>Empresa</li>
+          <li className={styles.item}>Empresa</li>
         </Link>
         <Link to='Contato'>
-          <li>Contato</li>
+          <li className={styles.item}>Contato</li>
         </Link>
       </ul>
     )
