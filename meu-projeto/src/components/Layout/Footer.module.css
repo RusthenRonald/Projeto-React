@@ -1,5 +1,13 @@
-.social-list{
+.social_list{
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+
+.social_list li {
+    margin: 0 1em;
+    cursor: pointer;
+    font-size: 1.6em;
 }
