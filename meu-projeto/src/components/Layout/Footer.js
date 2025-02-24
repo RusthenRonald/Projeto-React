@@ -1,7 +1,8 @@
+import {FaFacebook} from 'react-icons/fa'
 function Footer(){
     return(
-        <>
-            <p>Rodapé</p>
-        </>
+        <div>
+            <FaFacebook/>
+        </div>
     )
 } export default Footer
