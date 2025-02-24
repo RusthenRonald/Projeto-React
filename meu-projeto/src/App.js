@@ -9,8 +9,12 @@ function App() {
         <Link to='/'>
           <li>Home</li>
         </Link>
-        <li>Empresa</li>
-        <li>Contato</li>
+        <Link to='/Empresa'>
+          <li>Empresa</li>
+        </Link>
+        <Link to='Contato'>
+          <li>Contato</li>
+        </Link>
       </ul>
     </Router>
   );
