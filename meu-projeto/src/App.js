@@ -1,4 +1,4 @@
-import {BrowserRouter as Router , Switch , Route ,Link} from 'react-router-dom'
+import {BrowserRouter as Router , Routes, Route ,Link} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/Pages/Home';
@@ -19,6 +19,13 @@ function App() {
           <Link to='/contato'>Contato</Link>
         </li>
       </ul>
+
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/empresa' element={<Empresa/>}></Route>
+          <Route path='/contato' element={<Contato/>}></Route>
+        </Routes>
+
     </Router>
   );
 }
