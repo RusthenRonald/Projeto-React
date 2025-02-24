@@ -4,7 +4,8 @@ import './App.css';
 import Home from './components/Pages/Home';
 import Empresa from './components/Pages/Empresa';
 import Contato from './components/Pages/Contato';
-import Navbar from './components/NavBar';
+import Navbar from './components/Layout/NavBar';
+import Footer from './components/Layout/Footer';
 function App() {
 
   return (
@@ -15,8 +16,7 @@ function App() {
         <Route path='/Empresa' element={<Empresa/>}></Route>
         <Route path='/Contato' element={<Contato/>}></Route>
       </Routes>
-
-
+      <Footer/>
     </Router>
   );
 }
