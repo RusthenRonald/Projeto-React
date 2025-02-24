@@ -5,7 +5,9 @@ function Saudacao({nome}){
 
     return(
         <>
-            <p>{GerarSaudacao(nome)}</p>
+            <p>{nome &&
+            GerarSaudacao(nome)
+            }</p>
         </>
     )
 } export default Saudacao
