@@ -4,7 +4,19 @@ import './App.css';
 function App() {
 
   return (
-    
+    <Router>
+      <ul>
+        <li>
+          <Link to='/home'>Home</Link>
+        </li>
+        <li>
+          <Link to='/empresa'>Empresa</Link>
+        </li>
+        <li>
+          <Link to='/contato'>Contato</Link>
+        </li>
+      </ul>
+    </Router>
   );
 }
 
