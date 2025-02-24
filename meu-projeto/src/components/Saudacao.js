@@ -1,7 +1,11 @@
-function Saudacao(){
+function Saudacao({nome}){
+    function GerarSaudacao(algumNome){
+        return `Olá , ${algumNome}, tudo bem? `
+    }
+
     return(
         <>
-            <p>Saudação</p>
+            <p>{GerarSaudacao(nome)}</p>
         </>
     )
 } export default Saudacao

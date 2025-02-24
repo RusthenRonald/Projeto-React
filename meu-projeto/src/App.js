@@ -12,7 +12,7 @@ function App() {
       <h1>State Lift</h1>
       <SeuNome setNome={setNome}/>
       {nome}
-      <Saudacao/>
+      <Saudacao nome={nome}/>
     </div>
   );
 }
