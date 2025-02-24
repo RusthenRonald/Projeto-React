@@ -19,6 +19,14 @@ function App() {
           <li>Contato</li>
         </Link>
       </ul>
+
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/Empresa' element={<Empresa/>}></Route>
+        <Route path='/Contato' element={<Contato/>}></Route>
+      </Routes>
+
+
     </Router>
   );
 }
