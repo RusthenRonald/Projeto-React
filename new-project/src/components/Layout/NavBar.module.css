@@ -11,7 +11,10 @@
 .item{
     margin-right: 1em;
 }
-.item_a{
+.item a{
     color: white;
     text-decoration: none;
+}
+.item a:hover{
+    color: #Ffbb33;
 }

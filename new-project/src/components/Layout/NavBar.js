@@ -11,16 +11,16 @@ function NavBar(){
                 <img src={logo}></img></Link>
                 <ul className={styles.list}>
                     <li className={styles.item}>
-                        <Link to='/' className={styles.item_a}>Home</Link>
+                        <Link to='/' >Home</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to='/company'  className={styles.item_a}>Company</Link>
+                        <Link to='/company'>Company</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to='/contact'  className={styles.item_a}>Contact</Link>
+                        <Link to='/contact'  >Contact</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to='/newproject'  className={styles.item_a}>NewProject</Link>
+                        <Link to='/newproject' >NewProject</Link>
                     </li>
                 </ul>
             </Container>
