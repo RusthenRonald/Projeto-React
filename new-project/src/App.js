@@ -6,10 +6,12 @@ import NewProject from "./components/pages/NewProject";
 function App() {
   return (
     <Router>
-      <ul>
-        <li>Home</li>
-        <li>Contato</li>
-      </ul>
+      <div>
+        <Link to='/'>Home</Link>
+        <Link to='/company'>Company</Link>
+        <Link to='/contact'>Contact</Link>
+        <Link to='/newproject'>NewProject</Link>
+      </div>
 
       <Routes>
         <Route path="/" element={<Home/>}></Route>
