@@ -1,5 +1,5 @@
 function NewProject(){
     return(
-        <div></div>
+        <div><h1>NewProject</h1></div>
     )
 }export default NewProject

@@ -1,5 +1,5 @@
 function Company(){
     return(
-        <div></div>
+        <div><h1>Company</h1></div>
     )
 }export default Company
