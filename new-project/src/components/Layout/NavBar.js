@@ -14,6 +14,9 @@ function NavBar(){
                         <Link to='/' >Home</Link>
                     </li>
                     <li className={styles.item}>
+                        <Link to='/projects' >Project</Link>
+                    </li>
+                    <li className={styles.item}>
                         <Link to='/company'>Company</Link>
                     </li>
                     <li className={styles.item}>
@@ -22,6 +25,7 @@ function NavBar(){
                     <li className={styles.item}>
                         <Link to='/newproject' >NewProject</Link>
                     </li>
+
                 </ul>
             </Container>
         </nav>
