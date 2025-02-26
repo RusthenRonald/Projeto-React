@@ -1,4 +1,10 @@
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+  font-family:'Open Sans';
+}
+body,html,#root{
+  background-color: #efefef;
+  height: 100%;
 }
