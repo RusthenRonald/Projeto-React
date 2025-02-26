@@ -7,8 +7,8 @@ function Footer(){
                 <li><FaFacebook/></li>
                 <li><FaInstagram/></li>
                 <li><FaLinkedin/></li>
-                <p><span>Costs</span>&copy; 2025</p>
             </ul>
+            <p className={styles.copy_right}><span>Costs</span>&copy; 2025</p>
         </footer>
     )
 } export default Footer
