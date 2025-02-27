@@ -1,7 +1,10 @@
-import styles from './layout/LinkButton.module.css'
+import {Link} from 'react-router-dom'
+import styles from './LinkButton.module.css'
 
-function LinkButton(){
+function LinkButton({to,text}){
     return(
-        <div></div>
+        <Link to={to}>
+            {text}
+        </Link>
     )
 } export default LinkButton
