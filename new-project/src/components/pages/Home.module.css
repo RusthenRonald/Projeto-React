@@ -15,3 +15,11 @@
     padding: 0.2em;
     color:  #Ffbb33;
 }
+.home_container p{
+    color: #7b7b7b;
+    margin-bottom: 1.5em;
+}
+.home_container img{
+    width: 350px;
+    margin: 2em 0;
+}
