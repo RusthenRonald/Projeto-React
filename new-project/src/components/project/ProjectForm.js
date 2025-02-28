@@ -7,12 +7,15 @@ function ProjectForm(){
             <div>
                 <input type='number' placeholder="Insira o orçamento total"></input>
             </div>
-            <select name="category_id">
-                <option disabled>Selecione a categoria</option>
-                <option></option>
-                <option></option>
-                <option></option>
-            </select>
+            <div>
+                <select name="category_id">
+                    <option disabled selected>Selecione a categoria</option>
+                    <option></option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value='criar projeto'></input>
+            </div>
         </form>
     )
 } export default ProjectForm
