@@ -6,7 +6,7 @@ import Submit from '../form/Submit'
 function ProjectForm({btntext,handleSubmit,projectData}){
 
     const [categories,setCategories]=useState([])
-    const [project,setProject] = useState(projectData|| {})
+    const [project,setProject]=useState(projectData||{})
 
     useEffect(()=>{
     fetch('http://localhost:5000/categories',{
@@ -19,29 +19,35 @@ function ProjectForm({btntext,handleSubmit,projectData}){
 
    },[])
 
-   const submit = (e)=>{
+  
+   const submit = (e) =>{
         e.preventDefault()
         handleSubmit(project)//nossa função vai ter como argumento o project que são os dados
    }
 
+   //A função handleChange(e) atualiza o estado project conforme o usuário digita nos campos do formulário.
+   //...project é usado para salvar os valores antigos porque o state não salva
+   //pegmos o name atribuimos o novo valor
    function handleChange(e){
-        setProject({...project,[e.target.name]: e.target.value})
+        setProject({...project, [e.target.name]:e.target.value})
         console.log(project)
    }
 
-//nossa prop handleonchange do input esta recebendo um valor que é a função handleChange
+    //nossa prop handleonchange do input esta recebendo um valor que é a função handleChange
     return(
-        <form onSubmit={submit} className={styles.form} onSubmit={Submit}>
+        <form className={styles.form} onSubmit={submit}>
             <Input
                 type='text' 
                 text='Nome do projeto:' 
                 name='name' 
-                placeholder='Insira o nome do projeto' handleOnchange={handleChange}/>
+                placeholder='Insira o nome do projeto' 
+                handleOnchange={handleChange}/>
             <Input 
                 type='number' 
                 text='Orçamento do projeto:' 
                 name='budget' 
-                placeholder='Insira o orçamento total' handleOnchange={handleChange}/>
+                placeholder='Insira o orçamento total'
+                handleOnchange={handleChange} />
             <Select name='category_id' text='Selecione a categoria' options={categories}/>
            <Submit text={btntext}/>
         </form>
