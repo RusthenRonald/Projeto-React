@@ -1,7 +1,7 @@
 import styles from './ProjectForm.module.css'
 function ProjectForm(){
     return(
-        <form>
+        <form className={styles.form}>
             <div>
                 <input type="text" placeholder="Insira um nome do projeto"></input>
             </div>
