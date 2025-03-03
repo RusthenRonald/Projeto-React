@@ -10,9 +10,11 @@ function ProjectForm(props){
     fetch("http://localhost:5000/categories",{
         method:"GET",//define oque queremos fazer na API
         headers:{
-            'Content-Type':'application/json'
+            'Content-Type':'application/json'// está informando que esperamos receber JSON.
         }
     })
+    .then()
+    .catch((err)=>console.log(err))// Captura erros caso a requisição falhe.
 
     return(
         <form className={styles.form}>
