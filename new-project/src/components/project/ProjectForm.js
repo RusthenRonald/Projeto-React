@@ -7,6 +7,8 @@ function ProjectForm(props){
 
     const [categories,setCategories]=useState([])
 
+    fetch("http://localhost:5000/categories")
+
     return(
         <form className={styles.form}>
             <Input
