@@ -7,9 +7,9 @@ function Select ({text,name,options,handleOnchange,value}){
             <select name={name} id={name}>
                 <option>Selecione uma opção</option>
                 {options.map((option)=>(
-                    <option value={option.id}>{option.name}</option>
+                    <option value={option.id} key={option.id}>{option.name}</option>
                 ))}
             </select>
         </div>
     )
-} export default Select
+} export default Select // options.map(...): está percorrendo cada item do array options (que, no caso, são as categorias recebidas da API).
