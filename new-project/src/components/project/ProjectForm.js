@@ -13,7 +13,10 @@ function ProjectForm(props){
             'Content-Type':'application/json'// está informando que esperamos receber JSON.
         }
     })
-    .then()
+    .then((resp)=>resp.json())//oque eu receber de dado vira json
+    .then((data)=>{//pego os dados em json e adiciono como parametro
+        setCategories(data)
+    })
     .catch((err)=>console.log(err))// Captura erros caso a requisição falhe.
 
     return(
@@ -28,7 +31,7 @@ function ProjectForm(props){
                 text='Orçamento do projeto:' 
                 name='budget' 
                 placeholder='Insira o orçamento total'/>
-            <Select name='category_id' text='Selecione a categoria'/>
+            <Select name='category_id' text='Selecione a categoria' options={categories}/>
            <Submit text={props.btntext}/>
         </form>
     )
