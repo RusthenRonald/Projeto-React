@@ -7,7 +7,12 @@ function ProjectForm(props){
 
     const [categories,setCategories]=useState([])
 
-    fetch("http://localhost:5000/categories")
+    fetch("http://localhost:5000/categories",{
+        method:"GET",//define oque queremos fazer na API
+        headers:{
+            'Content-Type':'application/json'
+        }
+    })
 
     return(
         <form className={styles.form}>
