@@ -5,14 +5,7 @@ import Select from '../form/Select'
 import Submit from '../form/Submit'
 function ProjectForm(props){
 
-    const [categories,setCategories] = useState([])
-
-    fetch("http://localhost:5000/categories",{
-        method:"GET",
-        headers:{
-            'Content-Type': 'application/json'//determinando tipo da comunicação
-        }
-    })//obtendo e consumindo dados da api 
+    const [categories,setCategories]=useState([])
 
     return(
         <form className={styles.form}>
