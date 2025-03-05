@@ -1,26 +1,8 @@
-import {useEffect, useState} from 'react'
 import styles from './ProjectForm.module.css'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import Submit from '../form/Submit'
 function ProjectForm(props){
-
-    const [categories,setCategories]=useState([])
-
-    useEffect(()=>{
-        fetch("http://localhost:5000/categories",{
-            method:"GET",//define oque queremos fazer na API
-            headers:{
-                'Content-Type':'application/json'// está informando que esperamos receber JSON.
-            }
-        })
-        .then((resp)=>resp.json())//oque eu receber de dado vira json
-        .then((data)=>{//pego os dados em json e adiciono como parametro
-            setCategories(data)
-        })
-        .catch((err)=>console.log(err))// Captura erros caso a requisição falhe.
-    
-    },[])
     return(
         <form className={styles.form}>
             <Input
@@ -33,7 +15,7 @@ function ProjectForm(props){
                 text='Orçamento do projeto:' 
                 name='budget' 
                 placeholder='Insira o orçamento total'/>
-            <Select name='category_id' text='Selecione a categoria' options={categories}/>
+            <Select name='category_id' text='Selecione a categoria'/>
            <Submit text={props.btntext}/>
         </form>
     )
@@ -45,3 +27,6 @@ Antes, o fetch estava sendo chamado diretamente no corpo do componente, o que si
 
 Antes: O fetch era executado toda vez que o componente era renderizado.
 Agora: O fetch é executado apenas uma vez, logo após o componente ser montado pela primeira vez.*/ 
+
+/*Quando você armazena as categorias diretamente na API, isso permite centralizar e gerenciar os dados de forma consistente. Por exemplo, se você precisar atualizar a lista de categorias, você pode fazer isso diretamente na API e o front-end será atualizado automaticamente.
+Isso evita a necessidade de atualizar o código ou o front-end sempre que houver uma mudança nas categorias. O sistema de front-end só precisa fazer a requisição à API para obter as informações mais recentes.*/ 
