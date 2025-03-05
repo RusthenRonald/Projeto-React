@@ -1,8 +1,20 @@
+import {useState} from 'react'
 import styles from './ProjectForm.module.css'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import Submit from '../form/Submit'
 function ProjectForm(props){
+
+    const [categories,setCategories]=useState([])
+
+    fetch('http://localhost:5000/categories',{
+        method:'GET',
+        headers:{"Content-Type":"application/json"}
+    }  
+    ).then((resp)=>resp.json())
+    .then((data)=>setCategories(data))
+    .catch((err)=>console.log(err))
+
     return(
         <form className={styles.form}>
             <Input
@@ -15,7 +27,7 @@ function ProjectForm(props){
                 text='Orçamento do projeto:' 
                 name='budget' 
                 placeholder='Insira o orçamento total'/>
-            <Select name='category_id' text='Selecione a categoria'/>
+            <Select name='category_id' text='Selecione a categoria' options={categories}/>
            <Submit text={props.btntext}/>
         </form>
     )
