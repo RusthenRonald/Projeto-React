@@ -6,7 +6,18 @@ function NewProject(){
     const history = useHistory()
 
     function createPost(project){
-        
+        // inicialize cost and services
+        project.cost =0
+        project.services=[]
+        //O POST é um método HTTP usado em APIs para enviar dados para o servidor. 
+        fetch('http://localhost:5000/projects',{
+            method:'POST',
+            headers:{
+                'Content-type':'application/json'
+            }
+        }
+        )
+
     }
 
     return(
