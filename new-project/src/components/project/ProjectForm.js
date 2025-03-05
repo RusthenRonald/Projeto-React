@@ -3,7 +3,7 @@ import styles from './ProjectForm.module.css'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import Submit from '../form/Submit'
-function ProjectForm(props){
+function ProjectForm({btntext,handleSubmit}){
 
     const [categories,setCategories]=useState([])
 
@@ -30,7 +30,7 @@ function ProjectForm(props){
                 name='budget' 
                 placeholder='Insira o orçamento total'/>
             <Select name='category_id' text='Selecione a categoria' options={categories}/>
-           <Submit text={props.btntext}/>
+           <Submit text={btntext}/>
         </form>
     )
 } export default ProjectForm
