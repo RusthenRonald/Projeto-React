@@ -5,6 +5,10 @@ function NewProject(){
 
     const history = useHistory()
 
+    function createPost(project){
+        
+    }
+
     return(
         <div className={styles.new_project_container}>
             <h1>Criar Seu Projeto</h1>
