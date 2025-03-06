@@ -3,6 +3,7 @@ import styles from './NewProject.module.css'
 import ProjectForm from '../project/ProjectForm'
 function NewProject(){
 
+    const navigate =useNavigate()
 
     return(
         <div className={styles.new_project_container}>
