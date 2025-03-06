@@ -3,10 +3,12 @@ import styles from './ProjectForm.module.css'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import Submit from '../form/Submit'
-function ProjectForm({btntext}){
+function ProjectForm({btntext,handleSubmit,projectData}){
 
     const [categories,setCategories]=useState([])
-   useEffect(()=>{
+    const [project,setProject] = useState(projectData|| {})
+
+    useEffect(()=>{
     fetch('http://localhost:5000/categories',{
         method:'GET',
         headers:{"Content-Type":"application/json"}
@@ -16,8 +18,19 @@ function ProjectForm({btntext}){
     .catch((err)=>console.log(err))
 
    },[])
+
+   const submit = (e)=>{
+        e.preventDefault()
+        handleSubmit(project)//nossa função vai ter como argumento o project que são os dados
+   }
+
+   function handleChange(e){
+    
+   }
+
+
     return(
-        <form className={styles.form} onSubmit={Submit}>
+        <form onSubmit={submit} className={styles.form} onSubmit={Submit}>
             <Input
                 type='text' 
                 text='Nome do projeto:' 
