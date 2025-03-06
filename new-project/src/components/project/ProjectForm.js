@@ -25,22 +25,23 @@ function ProjectForm({btntext,handleSubmit,projectData}){
    }
 
    function handleChange(e){
-    
+        setProject({...project,[e.target.name]: e.target.value})
+        console.log(project)
    }
 
-
+//nossa prop handleonchange do input esta recebendo um valor que é a função handleChange
     return(
         <form onSubmit={submit} className={styles.form} onSubmit={Submit}>
             <Input
                 type='text' 
                 text='Nome do projeto:' 
                 name='name' 
-                placeholder='Insira o nome do projeto'/>
+                placeholder='Insira o nome do projeto' handleOnchange={handleChange}/>
             <Input 
                 type='number' 
                 text='Orçamento do projeto:' 
                 name='budget' 
-                placeholder='Insira o orçamento total'/>
+                placeholder='Insira o orçamento total' handleOnchange={handleChange}/>
             <Select name='category_id' text='Selecione a categoria' options={categories}/>
            <Submit text={btntext}/>
         </form>
