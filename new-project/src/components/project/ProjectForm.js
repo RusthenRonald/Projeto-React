@@ -34,6 +34,14 @@ function ProjectForm({btntext,handleSubmit,projectData}){
    }
 
     //nossa prop handleonchange do input esta recebendo um valor que é a função handleChange
+
+
+    function handleCategory(e){
+        setProject({...project,category:{
+            
+        }})
+    }
+
     return(
         <form className={styles.form} onSubmit={submit}>
             <Input
