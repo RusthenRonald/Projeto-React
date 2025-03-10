@@ -36,9 +36,13 @@ function ProjectForm({btntext,handleSubmit,projectData}){
     //nossa prop handleonchange do input esta recebendo um valor que é a função handleChange
 
 
+
+    //Ela é usada para salvar a categoria escolhida pelo usuário dentro do estado project.
     function handleCategory(e){
         setProject({...project,category:{
-            
+                id: e.target.value,
+                name: e.target.options[e.target.selectedIndex].text,
+
         }})
     }
 
