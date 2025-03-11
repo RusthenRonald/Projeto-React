@@ -18,7 +18,7 @@ function ProjectForm({btntext,handleSubmit,projectData}){
     .catch((err)=>console.log(err))
 
    },[])
-
+   
   
    const submit = (e) =>{
         e.preventDefault()
@@ -33,7 +33,10 @@ function ProjectForm({btntext,handleSubmit,projectData}){
         console.log(project)
    }
 
-   //A intenção dessa função provavelmente era atualizar a categoria do projeto quando o usuário selecionasse uma opção no <Select>
+   //A intenção dessa função é atualizar a categoria do projeto quando o usuário selecionasse uma opção no <Select>
+
+   /*Já não estamos atualizando as categorias no estado?
+    Sim e não. O useEffect está buscando as categorias da API e atualizando o estado categories, mas ele não está definindo a categoria escolhida no estado project. O <Select> exibe as opções, mas o valor selecionado não está sendo armazenado no estado.*/
     function handleCategory(e){
         setProject({...project,category:{
             
