@@ -58,7 +58,7 @@ function ProjectForm({btntext,handleSubmit,projectData}){
                 name='budget' 
                 placeholder='Insira o orçamento total'
                 handleOnchange={handleChange} />
-            <Select name='category_id' text='Selecione a categoria' options={categories}/>
+            <Select name='category_id' text='Selecione a categoria' options={categories} handleOnchange={handleCategory}/>
            <Submit text={btntext}/>
         </form>
     )
