@@ -39,7 +39,8 @@ function ProjectForm({btntext,handleSubmit,projectData}){
     Sim e não. O useEffect está buscando as categorias da API e atualizando o estado categories, mas ele não está definindo a categoria escolhida no estado project. O <Select> exibe as opções, mas o valor selecionado não está sendo armazenado no estado.*/
     function handleCategory(e){
         setProject({...project,category:{
-            
+            id: e.target.value,
+            name:e.target.options[e.target.selectedIndex].text // Obtém o nome da categoria selecionada
         }})
     }
 
