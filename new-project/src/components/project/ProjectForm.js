@@ -22,7 +22,8 @@ function ProjectForm({btntext,handleSubmit,projectData}){
   
    const submit = (e) =>{
         e.preventDefault()
-        handleSubmit(project)//nossa função vai ter como argumento o project que são os dados
+        console.log(project)
+        //handleSubmit(project)//nossa função vai ter como argumento o project que são os dados
    }
 
    //A função handleChange(e) atualiza o estado project conforme o usuário digita nos campos do formulário.
@@ -58,7 +59,7 @@ function ProjectForm({btntext,handleSubmit,projectData}){
                 name='budget' 
                 placeholder='Insira o orçamento total'
                 handleOnchange={handleChange} />
-            <Select name='category_id' text='Selecione a categoria' options={categories} handleOnchange={handleCategory}/>
+            <Select name='category_id' text='Selecione a categoria' options={categories} handleOnchange={handleCategory} value={project.category ? project.category.id: ''}/>
            <Submit text={btntext}/>
         </form>
     )
