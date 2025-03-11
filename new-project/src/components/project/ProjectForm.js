@@ -52,16 +52,18 @@ function ProjectForm({btntext,handleSubmit,projectData}){
                 text='Nome do projeto:' 
                 name='name' 
                 placeholder='Insira o nome do projeto' 
-                handleOnchange={handleChange}/>
+                handleOnchange={handleChange}
+                value={project.name?project.name:''}/>
             <Input 
                 type='number' 
                 text='Orçamento do projeto:' 
                 name='budget' 
                 placeholder='Insira o orçamento total'
-                handleOnchange={handleChange} />
+                handleOnchange={handleChange} 
+                value={project.budget?project.budget:''}/>
             <Select name='category_id' text='Selecione a categoria' options={categories} handleOnchange={handleCategory} value={project.category ? project.category.id: ''}/>
-           <Submit text={btntext}/>
-        </form>
+           <Submit text={btntext}/> 
+        </form>//project.category é uma propriedade do objeto project
     )
 } export default ProjectForm
 
