@@ -2,7 +2,20 @@ import {useState, useEffect} from 'react'
 
 import styles from './Message.module.css'
 function Message({type, msg}){
+
+    const [visible, setVisible] = useState(false)//começa n exibindo
+
+
+    useEffect(()=>{
+        if(!msg){
+            setVisible(false)
+        }
+    })
     return(
-        <div className={`${styles.message} ${styles[type]}`}>{msg}</div>
-    )
+        <>
+            {visible &&(
+                <div className={`${styles.message}${styles[type]}`}></div>
+            )}
+        </>
+    ) 
 } export default Message
