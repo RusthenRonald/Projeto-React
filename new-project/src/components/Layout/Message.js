@@ -5,7 +5,7 @@ function Message({type, msg}){
 
     const[visible,setVisible]=useState(false)
 
-
+    //O useEffect está determinando como a mensagem será exibida e por quanto tempo!
     useEffect(()=>{
 
         if(!msg){
