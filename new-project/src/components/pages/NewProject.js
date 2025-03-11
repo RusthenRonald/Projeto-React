@@ -19,7 +19,7 @@ function NewProject(){
         .then((data)=>{
             console.log(data)
             //redirect
-            navigate('/projects' {message: 'Projeto criado com sucesso!'})
+            navigate('/projects' )
         })
         .catch((err)=>console.log(err))
     }
