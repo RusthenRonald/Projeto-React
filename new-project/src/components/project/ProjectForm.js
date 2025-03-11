@@ -22,8 +22,7 @@ function ProjectForm({btntext,handleSubmit,projectData}){
   
    const submit = (e) =>{
         e.preventDefault()
-        console.log(project)
-        //handleSubmit(project)//nossa função vai ter como argumento o project que são os dados
+        handleSubmit(project)//nossa função vai ter como argumento o project que são os dados
    }
 
    //A função handleChange(e) atualiza o estado project conforme o usuário digita nos campos do formulário.
