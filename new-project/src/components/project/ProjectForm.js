@@ -17,8 +17,7 @@ function ProjectForm({btntext,handleSubmit,projectData}){
     .then((data)=>setCategories(data))
     .catch((err)=>console.log(err))
 
-   },[])
-
+   },[])}
   
    const submit = (e) =>{
         e.preventDefault()
@@ -33,8 +32,7 @@ function ProjectForm({btntext,handleSubmit,projectData}){
         console.log(project)
    }
 
-    //nossa prop handleonchange do input esta recebendo um valor que é a função handleChange
-
+   //A intenção dessa função é atualizar a categoria do projeto quando o usuário selecionasse uma opção no <Select>
 
 
     //Ela é usada para salvar a categoria escolhida pelo usuário dentro do estado project.
@@ -42,6 +40,14 @@ function ProjectForm({btntext,handleSubmit,projectData}){
         setProject({...project,category:{
                 id: e.target.value,
                 name: e.target.options[e.target.selectedIndex].text,
+
+
+   /*Já não estamos atualizando as categorias no estado?
+    Sim e não. O useEffect está buscando as categorias da API e atualizando o estado categories, mas ele não está definindo a categoria escolhida no estado project. O <Select> exibe as opções, mas o valor selecionado não está sendo armazenado no estado.*/
+    function handleCategory(e){
+        setProject({...project,category:{
+            id: e.target.value,
+            name:e.target.options[e.target.selectedIndex].text // Obtém o nome da categoria selecionada
 
         }})
     }
@@ -53,16 +59,18 @@ function ProjectForm({btntext,handleSubmit,projectData}){
                 text='Nome do projeto:' 
                 name='name' 
                 placeholder='Insira o nome do projeto' 
-                handleOnchange={handleChange}/>
+                handleOnchange={handleChange}
+                value={project.name?project.name:''}/>
             <Input 
                 type='number' 
                 text='Orçamento do projeto:' 
                 name='budget' 
                 placeholder='Insira o orçamento total'
-                handleOnchange={handleChange} />
-            <Select name='category_id' text='Selecione a categoria' options={categories}/>
-           <Submit text={btntext}/>
-        </form>
+                handleOnchange={handleChange} 
+                value={project.budget?project.budget:''}/>
+            <Select name='category_id' text='Selecione a categoria' options={categories} handleOnchange={handleCategory} value={project.category ? project.category.id: ''}/>
+           <Submit text={btntext}/> 
+        </form>//project.category é uma propriedade do objeto project
     )
 } export default ProjectForm
 
