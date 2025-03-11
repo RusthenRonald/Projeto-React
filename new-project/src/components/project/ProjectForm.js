@@ -33,9 +33,7 @@ function ProjectForm({btntext,handleSubmit,projectData}){
         console.log(project)
    }
 
-    //nossa prop handleonchange do input esta recebendo um valor que é a função handleChange
-
-
+   //A intenção dessa função provavelmente era atualizar a categoria do projeto quando o usuário selecionasse uma opção no <Select>
     function handleCategory(e){
         setProject({...project,category:{
             
