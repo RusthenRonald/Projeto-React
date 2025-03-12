@@ -1,28 +1,5 @@
 {
-  "projects": [
-    {
-      "id": "8d05",
-      "name": "meu projeto",
-      "budget": "100",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "bf5e",
-      "name": "meu projeto",
-      "budget": "2000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
-    }
-  ],
+  "projects": [],
   "categories": [
     {
       "id": "1",
