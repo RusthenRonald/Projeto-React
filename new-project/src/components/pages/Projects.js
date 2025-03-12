@@ -1,4 +1,5 @@
 import {useLocation} from "react-router-dom"
+import styles from './Projects.module.css'
 import Message from "../Layout/Message"
 function Projects (){
     
