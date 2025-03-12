@@ -17,6 +17,9 @@ function Projects (){
                 <a href="#">Novo Projeto</a>
             </div>
             {message && <Message type='sucess' msg={message}/>}
+            <Container>
+                <p>Projetos...</p>
+            </Container>
         </div>
     )
 } export default Projects
