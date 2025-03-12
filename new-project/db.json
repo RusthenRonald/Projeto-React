@@ -1,12 +1,23 @@
 {
   "projects": [
     {
-      "id": "cb04",
-      "name": "Meu projeto",
+      "id": "8d05",
+      "name": "meu projeto",
+      "budget": "100",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "bf5e",
+      "name": "meu projeto",
       "budget": "2000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "1",
+        "name": "Infra"
       },
       "cost": 0,
       "services": []
