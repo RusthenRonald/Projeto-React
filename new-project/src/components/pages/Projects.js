@@ -2,6 +2,7 @@ import {useLocation} from "react-router-dom"
 import styles from './Projects.module.css'
 import Message from "../Layout/Message"
 import Container from '../Layout/Container'
+import LinkButton from '../Layout/LinkButton'
 function Projects (){
     
     const location=useLocation() // useLocation() para recuperar os dados passados no state
@@ -14,10 +15,10 @@ function Projects (){
         <div>
             <div>
                 <h1>Meus Projetos</h1>
-                <a href="#">Novo Projeto</a>
+                <LinkButton to='NewProject' text='Criar Projeto' />
             </div>
             {message && <Message type='sucess' msg={message}/>}
-            <Container>
+            <Container customClass='start'>
                 <p>Projetos...</p>
             </Container>
         </div>
