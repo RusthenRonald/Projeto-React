@@ -3,6 +3,7 @@ import styles from './Projects.module.css'
 import Message from "../Layout/Message"
 import Container from '../Layout/Container'
 import LinkButton from '../Layout/LinkButton'
+import ProjectCard from "./ProjectCard"
 function Projects (){
     
     const location=useLocation() // useLocation() para recuperar os dados passados no state
