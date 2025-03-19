@@ -12,7 +12,7 @@ function Projects (){
     } //Se o state existir, o valor da chave message (que foi passado na navegação) é extraído e atribuído à variável message.
 
     return(
-        <div>
+        <div className={styles.project_container}>
             <div>
                 <h1>Meus Projetos</h1>
                 <LinkButton to='NewProject' text='Criar Projeto' />
