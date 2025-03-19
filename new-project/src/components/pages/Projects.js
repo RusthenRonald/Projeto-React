@@ -10,6 +10,19 @@ function Projects (){
     
     const [projects,setProjects] =useState([])
 
+    useEffect(()=>{
+
+        fetch("http://localhost:5000/projects",
+            {
+                method:"GET",
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            }
+        )
+
+    },[])
+
     const location=useLocation() // useLocation() para recuperar os dados passados no state
     let message=''
     if(location.state){
