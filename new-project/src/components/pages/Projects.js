@@ -4,8 +4,12 @@ import Message from "../Layout/Message"
 import Container from '../Layout/Container'
 import LinkButton from '../Layout/LinkButton'
 import ProjectCard from "./ProjectCard"
+import {useState,useEffect} from "react"
+
 function Projects (){
     
+    const [projects,setProjects] =useState([])
+
     const location=useLocation() // useLocation() para recuperar os dados passados no state
     let message=''
     if(location.state){
