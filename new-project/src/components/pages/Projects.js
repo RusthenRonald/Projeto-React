@@ -21,6 +21,7 @@ function Projects (){
             }
         ).then((resp)=>resp.json())
         .then((data)=>{
+            console.log(data)
             setProjects(data)
         })
         .catch((err)=>console.log(err))
@@ -41,7 +42,11 @@ function Projects (){
             </div>
             {message && <Message type='sucess' msg={message}/>}
             <Container customClass='start'>
-                <p>Projetos...</p>
+                {projects.length>0 && //verifica se há projeto
+                    projects.map((projects)=>(
+                        <ProjectCard name={projects.name}/>
+                    ))
+                }
             </Container>
         </div>
     )
