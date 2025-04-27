@@ -42,7 +42,9 @@ function Projects (){
             </div>
             {message && <Message type='sucess' msg={message}/>}
             <Container customClass='start'>
-                <ProjectCard/>
+                {projects.length >0 &&
+                    projects.map()
+                }
             </Container>
         </div>
     )
