@@ -12,15 +12,17 @@ function Projects (){
     const [projects,setProjects] =useState([])
     const [removeLoading,setRemoveLoading]=useState(false)
 
+    //Envia um DELETE para o servidor com o id do projeto que quer excluir.
     function removeProject(id){
-        fetch("http://localhost:5000/projects"&{id},{
+        fetch("http://localhost:5000/projects${id}",{
             method:'DELETE',
             headers:{
                 'Content-Type':'application/json'
             }
         }).then((resp)=>resp.json())
         .then((data)=>{
-
+            setProjects(projects.filter((project)=> project.id !== id))
+            //pra saber qual projeto remover verifica se id são diferentes
         })
         .catch((err)=>console.log(err))
     }
