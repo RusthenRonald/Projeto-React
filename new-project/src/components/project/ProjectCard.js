@@ -8,8 +8,8 @@ function ProjectCard({id,name,budget,category,handleRemove}){
             <p>
                 <span>Orçamento:</span> R${budget}
             </p>
-            <p>
-                <span></span> {category}
+            <p className={styles.category_text}>
+                <span className={`${styles[category.toLowerCase()]}`}></span> {category}
             </p>
             <div>
                 <p>Editar</p>
