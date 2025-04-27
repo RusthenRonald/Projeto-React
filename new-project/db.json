@@ -1,16 +1,6 @@
 {
   "projects": [
-    {
-      "id": "9b0e",
-      "name": "meu projeto",
-      "budget": "2344",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    }
+    
   ],
   "categories": [
     {
