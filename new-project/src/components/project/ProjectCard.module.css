@@ -47,3 +47,14 @@
 .category_text .planejamento{
     background-color: #fbe7c6;
 }
+
+.project_card_actions{
+    margin-top: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+.project_card_actions a,
+.project_card_actions button {
+    
+}
