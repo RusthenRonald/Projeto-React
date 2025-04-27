@@ -4,11 +4,13 @@ import Message from "../Layout/Message"
 import Container from '../Layout/Container'
 import LinkButton from '../Layout/LinkButton'
 import ProjectCard from "../project/ProjectCard"
+import Loading from "../Layout/loading"
 import {useState,useEffect} from "react"
 
 function Projects (){
     
     const [projects,setProjects] =useState([])
+    const [removeLoading,setRemoveLoading]=useState(false)
 
     useEffect(()=>{
 
