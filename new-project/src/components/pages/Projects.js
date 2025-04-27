@@ -12,6 +12,15 @@ function Projects (){
     const [projects,setProjects] =useState([])
     const [removeLoading,setRemoveLoading]=useState(false)
 
+    function removeProject(id){
+        fetch("http://localhost:5000/projects"&{id},{
+            headers:{
+                'Content-Type':'application/json'
+            }
+        }).then()
+        .catch((err)=>console.log(err))
+    }
+
     useEffect(()=>{
     
         setTimeout(()=>{
