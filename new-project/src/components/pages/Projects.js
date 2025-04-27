@@ -14,7 +14,7 @@ function Projects (){
 
     //Envia um DELETE para o servidor com o id do projeto que quer excluir.
     function removeProject(id){
-        fetch("http://localhost:5000/projects${id}",{
+        fetch(`http://localhost:5000/projects/${id}`,{
             method:'DELETE',
             headers:{
                 'Content-Type':'application/json'
@@ -69,6 +69,7 @@ function Projects (){
                         budget={project.budget}
                         category={project.category.name}
                         key={project.id}
+                        handleRemove={removeProject}
                         />
                     ))
                 }
