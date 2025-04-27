@@ -42,7 +42,7 @@ function Projects (){
             </div>
             {message && <Message type='sucess' msg={message}/>}
             <Container customClass='start'>
-                
+                <ProjectCard/>
             </Container>
         </div>
     )
