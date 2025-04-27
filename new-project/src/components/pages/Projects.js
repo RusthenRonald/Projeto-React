@@ -4,7 +4,7 @@ import Message from "../Layout/Message"
 import Container from '../Layout/Container'
 import LinkButton from '../Layout/LinkButton'
 import ProjectCard from "../project/ProjectCard"
-import Loading from "../Layout/loading"
+import Loading from "../Layout/Loading"
 import {useState,useEffect} from "react"
 
 function Projects (){
@@ -13,20 +13,23 @@ function Projects (){
     const [removeLoading,setRemoveLoading]=useState(false)
 
     useEffect(()=>{
-
-        fetch("http://localhost:5000/projects",
-            {
-                method:"GET",
-                headers:{
-                    "Content-Type":"application/json"
+    
+        setTimeout(()=>{
+            fetch("http://localhost:5000/projects",
+                {
+                    method:"GET",
+                    headers:{
+                        "Content-Type":"application/json"
+                    }
                 }
-            }
-        ).then((resp)=>resp.json())
-        .then((data)=>{
-            console.log(data)
-            setProjects(data)
-        })
-        .catch((err)=>console.log(err))
+            ).then((resp)=>resp.json())
+            .then((data)=>{
+                console.log(data)
+                setProjects(data)
+                setRemoveLoading(true)
+            })
+            .catch((err)=>console.log(err))
+        },3000)
 
     },[])
 
@@ -54,6 +57,7 @@ function Projects (){
                         />
                     ))
                 }
+                {!removeLoading && <Loading/>}
             </Container>
         </div>
     )
