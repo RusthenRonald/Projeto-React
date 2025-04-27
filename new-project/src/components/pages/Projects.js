@@ -14,10 +14,14 @@ function Projects (){
 
     function removeProject(id){
         fetch("http://localhost:5000/projects"&{id},{
+            method:'DELETE',
             headers:{
                 'Content-Type':'application/json'
             }
-        }).then()
+        }).then((resp)=>resp.json())
+        .then((data)=>{
+
+        })
         .catch((err)=>console.log(err))
     }
 
