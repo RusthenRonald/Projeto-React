@@ -3,7 +3,7 @@ import styles from './Projects.module.css'
 import Message from "../Layout/Message"
 import Container from '../Layout/Container'
 import LinkButton from '../Layout/LinkButton'
-import ProjectCard from "./ProjectCard"
+import ProjectCard from "../project/ProjectCard"
 import {useState,useEffect} from "react"
 
 function Projects (){
@@ -42,11 +42,7 @@ function Projects (){
             </div>
             {message && <Message type='sucess' msg={message}/>}
             <Container customClass='start'>
-                {projects.length>0 && //verifica se há projeto
-                    projects.map((projects)=>(
-                        <ProjectCard name={projects.name}/>
-                    ))
-                }
+                
             </Container>
         </div>
     )
