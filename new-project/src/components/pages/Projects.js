@@ -29,7 +29,7 @@ function Projects (){
                 setRemoveLoading(true)
             })
             .catch((err)=>console.log(err))
-        },3000)
+        },300)
 
     },[])
 
@@ -58,6 +58,9 @@ function Projects (){
                     ))
                 }
                 {!removeLoading && <Loading/>}
+                {removeLoading && projects.length ==0 &&(
+                    <p>Não há projetos cadastrados!</p>
+                ) }
             </Container>
         </div>
     )
