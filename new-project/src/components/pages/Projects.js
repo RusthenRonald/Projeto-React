@@ -11,6 +11,7 @@ function Projects (){
     
     const [projects,setProjects] =useState([])
     const [removeLoading,setRemoveLoading]=useState(false)
+    const [projectMessage,setProjectMessage]=useState("")
 
     //Envia um DELETE para o servidor com o id do projeto que quer excluir.
     function removeProject(id){
@@ -23,6 +24,7 @@ function Projects (){
         .then((data)=>{
             setProjects(projects.filter((project)=> project.id !== id))
             //pra saber qual projeto remover verifica se id são diferentes
+            //message
         })
         .catch((err)=>console.log(err))
     }

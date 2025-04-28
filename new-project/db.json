@@ -1,5 +1,17 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "1ace",
+      "name": "Doação",
+      "budget": "4000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
   "categories": [
     {
       "id": "1",
