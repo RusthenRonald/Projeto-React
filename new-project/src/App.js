@@ -7,6 +7,7 @@ import Container from "./components/Layout/Container";
 import NavBar from "./components/Layout/NavBar";
 import Footer from "./components/Layout/Footer";
 import Projects from "./components/pages/Projects";
+import Project from "./components/pages/Project";
 function App() {
   return (
     <Router>
@@ -19,7 +20,7 @@ function App() {
           <Route path="/company" element={<Company/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
           <Route path="/newproject" element={<NewProject/>}></Route>
-          <Route path="/project" element={<Project/>}></Route>
+          <Route path="/project/:id" element={<Project/>}></Route>
         </Routes>
       </Container>
       <Footer/>
