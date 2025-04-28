@@ -21,7 +21,7 @@ function Projects (){
                 'Content-Type':'application/json'
             }
         }).then((resp)=>resp.json())
-        .then((data)=>{
+        .then(()=>{
             setProjects(projects.filter((project)=> project.id !== id))
             //pra saber qual projeto remover verifica se id são diferentes
             //message
