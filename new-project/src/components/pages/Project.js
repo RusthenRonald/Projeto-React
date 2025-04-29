@@ -2,6 +2,7 @@ import styles from './Project.module.css'
 import { useParams } from 'react-router-dom'
 import { useState ,useEffect} from 'react'
 import Loading from '../Layout/Loading'
+import Container from '../Layout/Container'
 
 function Project(){
     //pegando id pela url
@@ -23,15 +24,22 @@ function Project(){
                 console.log(data)
             })
             .catch((err)=>console.log(err))
-        },5000)
+        },300)
     },[id])
 
     return(
         <>
             {project.name ? (
-                <p>{project.name}</p>
+                <div>
+                    <Container customClass='colum'>
+                        <div>
+                            <h1> Projeto: {project.name}</h1>
+                            <button>Editar Projeto</button>
+                        </div>
+                    </Container>
+                </div>
             ):(
-                <Loading/>
+                <p><Loading/></p>
             )}
         </>
     )
