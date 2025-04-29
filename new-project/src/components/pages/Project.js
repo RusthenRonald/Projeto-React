@@ -25,7 +25,7 @@ function Project(){
 
     return(
         <div>
-            <p>Projeto</p>
+            <p>{project.name}</p>
         </div>
     )
 } export default Project
