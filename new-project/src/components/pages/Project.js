@@ -10,6 +10,7 @@ function Project(){
     console.log(id)
 
     const [project,setProject]=useState([])
+    const [showProjectForm, setShowProjectForm] = useState(false)
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -27,6 +28,10 @@ function Project(){
         },300)
     },[id])
 
+    toggleProjectForm(){
+        setShowProjectForm(!showProjectForm)
+    }
+
     return(
         <>
             {project.name ? (
@@ -34,7 +39,7 @@ function Project(){
                     <Container customClass='colum'>
                         <div>
                             <h1> Projeto: {project.name}</h1>
-                            <button>Editar Projeto</button>
+                            <button onClick={toggleProjectForm}>Editar Projeto</button>{/*alterna form do projeto*/}
                         </div>
                     </Container>
                 </div>
