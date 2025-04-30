@@ -28,7 +28,7 @@ function Project(){
         },300)
     },[id])
 
-    toggleProjectForm(){
+    function toggleProjectForm(){
         setShowProjectForm(!showProjectForm)
     }
 
@@ -39,7 +39,9 @@ function Project(){
                     <Container customClass='colum'>
                         <div>
                             <h1> Projeto: {project.name}</h1>
-                            <button onClick={toggleProjectForm}>Editar Projeto</button>{/*alterna form do projeto*/}
+                            <button onClick={toggleProjectForm}>
+                                {!showProjectForm ? 'Editar Projeto':'Fechar'}
+                            </button>{/*alterna form do projeto*/}
                         </div>
                     </Container>
                 </div>
