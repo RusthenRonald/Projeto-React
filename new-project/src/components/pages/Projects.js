@@ -71,7 +71,7 @@ function Projects (){
                         <ProjectCard name={project.name} 
                         id={project.id}
                         budget={project.budget}
-                        category={project.category.name}
+                        category={project.category?.name || 'Sem categoria'}
                         key={project.id}
                         handleRemove={removeProject}
                         />

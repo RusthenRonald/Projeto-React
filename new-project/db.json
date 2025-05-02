@@ -10,6 +10,13 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "6fc6",
+      "name": "meu projeto",
+      "budget": "1500",
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
