@@ -33,6 +33,10 @@ function Project(){
         setShowProjectForm(!showProjectForm)
     }
 
+    function editPost(){
+        
+    }
+
     return(
         <>
             {project.name ? (
@@ -52,7 +56,9 @@ function Project(){
                                 </div>
                             ):(
                                 <div className={styles.project_info}>
-                                    <ProjectForm handleSubmit={editPost}  btntext="Concluir edição"/>
+                                    <ProjectForm handleSubmit={editPost}  
+                                    projectData={project} //os dados que ja estao salvos
+                                    btntext="Concluir edição"/>
                                 </div>
                             )}
                         </div>
