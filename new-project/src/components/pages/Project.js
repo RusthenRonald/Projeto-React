@@ -4,6 +4,7 @@ import { useState ,useEffect} from 'react'
 import Loading from '../Layout/Loading'
 import Container from '../Layout/Container'
 import ProjectForm from '../project/ProjectForm'
+import Message from "../Layout/Message"
 
 function Project(){
     //pegando id pela url
@@ -13,6 +14,7 @@ function Project(){
     const [project,setProject]=useState([])
     const [showProjectForm, setShowProjectForm] = useState(false)
     const [message,setMessage] = useState()
+    const [type,setType] = useState()
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -59,6 +61,7 @@ function Project(){
             {project.name ? (
                 <div className={styles.project_details}>
                     <Container customClass='colum'>
+                        {message && <Message type={type} msg={message}/> }
                         <div className={styles.details_container}>
                             <h1> Projeto: {project.name}</h1>
                             <button onClick={toggleProjectForm} className={styles.btn}>
