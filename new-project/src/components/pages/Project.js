@@ -44,11 +44,13 @@ function Project(){
                 "Content-Type":"application/json"
             },
             body:JSON.stringify(project),
-        }).then((resp)=>resp.json())
+        }).then(resp=>resp.json())
         .then((data)=>{
-
+            setProject(data)
+            setShowProjectForm(false)//fecha form de edição
+            //message
         })
-        .catch((err)=>console.log(err))
+        .catch(err=>console.log(err))
     }
 
     return(
