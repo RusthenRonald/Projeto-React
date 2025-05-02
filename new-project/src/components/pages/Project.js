@@ -100,6 +100,9 @@ function Project(){
                             <button onClick={toggleServiceForm} className={styles.btn}>
                                 {!showServiceForm? "Adicionar serviço":"Fechar"}
                             </button>{/*alterna form do projeto*/}
+                            <div className={styles.project_info}>
+                                oi
+                            </div>
                         </div>
                     </Container>
                 </div>
