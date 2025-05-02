@@ -36,8 +36,14 @@ function Project(){
     function editPost(project){
         //budget validation
         if(project.budget < project.cost){
-
+            //message
         }
+        fetch(`http://localhost:5000/projects/${project.id}`,{
+            method:"PATCH",
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
     }
 
     return(
