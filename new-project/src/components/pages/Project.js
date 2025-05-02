@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useState ,useEffect} from 'react'
 import Loading from '../Layout/Loading'
 import Container from '../Layout/Container'
+import ProjectForm from '../project/ProjectForm'
 
 function Project(){
     //pegando id pela url
@@ -50,7 +51,9 @@ function Project(){
                                     <p><span>Total Utilizado:</span> R${project.budget}</p>
                                 </div>
                             ):(
-                                <div className={styles.project_info}>detalhes do projeto</div>
+                                <div className={styles.project_info}>
+                                    <p>Form</p>
+                                </div>
                             )}
                         </div>
                     </Container>
