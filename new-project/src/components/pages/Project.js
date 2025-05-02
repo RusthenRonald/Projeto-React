@@ -37,6 +37,9 @@ function Project(){
     }
 
     function editPost(project){
+
+        setMessage("")//reinicia estado pra nao dar erro devido o mesmo nome
+
         //budget validation
         if(project.budget < project.cost){
             //message
@@ -55,6 +58,8 @@ function Project(){
             setProject(data)
             setShowProjectForm(false)//fecha form de edição
             //message
+            setMessage("Projeto atualizado!")
+            setType('sucess')
         })
         .catch(err=>console.log(err))
     }
