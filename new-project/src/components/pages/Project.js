@@ -40,6 +40,9 @@ function Project(){
         //budget validation
         if(project.budget < project.cost){
             //message
+            setMessage("O orçamento não pode ser menor que o custo do projeto")
+            setType('error')
+            return false //parar projeto
         }
         fetch(`http://localhost:5000/projects/${project.id}`,{
             method:"PATCH",//altera só qoue foi mudado
