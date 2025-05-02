@@ -35,6 +35,9 @@ function Project(){
 
     function editPost(project){
         //budget validation
+        if(project.budget < project.cost){
+
+        }
     }
 
     return(
@@ -52,7 +55,7 @@ function Project(){
                                 <div className={styles.project_info}>
                                     <p><span>Categoria :</span> {project.category.name}</p>
                                     <p><span>Total de Orçamento :</span> R${project.budget}</p>
-                                    <p><span>Total Utilizado:</span> R${project.budget}</p>
+                                    <p><span>Total Utilizado:</span> R${project.cost}</p>
                                 </div>
                             ):(
                                 <div className={styles.project_info}>
