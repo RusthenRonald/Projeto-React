@@ -101,9 +101,18 @@ function Project(){
                                 {!showServiceForm? "Adicionar serviço":"Fechar"}
                             </button>{/*alterna form do projeto*/}
                             <div className={styles.project_info}>
-                                oi
+                                {showServiceForm && (
+                                    <div>Formulário do Serviço</div>
+                                )
+                                }
                             </div>
                         </div>
+
+                        <h2>Serviços</h2>
+                        <Container customClass="start">
+                                <p>Itens de serviços</p>
+                        </Container>
+
                     </Container>
                 </div>
             ):(
