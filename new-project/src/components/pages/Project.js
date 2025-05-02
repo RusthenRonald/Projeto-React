@@ -33,8 +33,8 @@ function Project(){
         setShowProjectForm(!showProjectForm)
     }
 
-    function editPost(){
-        
+    function editPost(project){
+        //budget validation
     }
 
     return(
