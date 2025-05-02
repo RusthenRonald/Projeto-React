@@ -13,6 +13,7 @@ function Project(){
 
     const [project,setProject]=useState([])
     const [showProjectForm, setShowProjectForm] = useState(false)
+    const [showServiceForm,setShowServiceForm] = useState(false)
     const [message,setMessage] = useState()
     const [type,setType] = useState()
 
@@ -34,6 +35,9 @@ function Project(){
 
     function toggleProjectForm(){
         setShowProjectForm(!showProjectForm)
+    }
+    function toggleServiceForm(){
+        setShowServiceForm(!showServiceForm)
     }
 
     function editPost(project){
@@ -89,6 +93,13 @@ function Project(){
                                     btntext="Concluir edição"/>
                                 </div>
                             )}
+                        </div>
+
+                        <div className={styles.service_form_container}>
+                            <h2>Adicione um serviço:</h2>
+                            <button onClick={toggleServiceForm} className={styles.btn}>
+                                {!showServiceForm? "Adicionar serviço":"Fechar"}
+                            </button>{/*alterna form do projeto*/}
                         </div>
                     </Container>
                 </div>
