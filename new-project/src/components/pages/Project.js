@@ -39,11 +39,16 @@ function Project(){
             //message
         }
         fetch(`http://localhost:5000/projects/${project.id}`,{
-            method:"PATCH",
+            method:"PATCH",//altera só qoue foi mudado
             headers:{
                 "Content-Type":"application/json"
-            }
+            },
+            body:JSON.stringify(project),
+        }).then((resp)=>resp.json())
+        .then((data)=>{
+
         })
+        .catch((err)=>console.log(err))
     }
 
     return(
