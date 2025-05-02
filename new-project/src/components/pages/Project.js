@@ -52,7 +52,7 @@ function Project(){
                                 </div>
                             ):(
                                 <div className={styles.project_info}>
-                                    <ProjectForm btntext="Concluir edição"/>
+                                    <ProjectForm handleSubmit={editPost}  btntext="Concluir edição"/>
                                 </div>
                             )}
                         </div>
