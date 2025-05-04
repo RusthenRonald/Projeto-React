@@ -5,6 +5,7 @@ import Loading from '../Layout/Loading'
 import Container from '../Layout/Container'
 import ProjectForm from '../project/ProjectForm'
 import Message from "../Layout/Message"
+import ServiceForm from '../Services/ServiceForm'
 
 function Project(){
     //pegando id pela url
