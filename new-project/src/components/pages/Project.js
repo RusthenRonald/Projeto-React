@@ -1,6 +1,6 @@
 import styles from './Project.module.css'
 import {parse,v4 as uuidv4} from "uuid"
-import { useParams } from 'react-router-dom'
+import { data, useParams } from 'react-router-dom'
 import { useState ,useEffect} from 'react'
 import Loading from '../Layout/Loading'
 import Container from '../Layout/Container'
@@ -91,7 +91,14 @@ function Project(){
                 "Content-Type":"application/json"
             },
             body:JSON.stringify(projectUpdated)
+        }).then((resp)=>resp.json())
+        .then((data)=>{
+            setProject(projectUpdated)
+            setServices(servicesUpdate)
+            setMessage("Serviço removido com Sucesso!")
+            setType("sucess")
         })
+        .catch((err)=>console.log(err))
     }
 
     function createService(project){

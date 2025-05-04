@@ -19,25 +19,13 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 1202,
+      "cost": 500,
       "services": [
-        {
-          "name": "serviço dev",
-          "cost": "200",
-          "description": "algo",
-          "id": "09dd94ac-424a-46c0-9689-0c3fe1c5b1e0"
-        },
         {
           "name": "Contratar dev PHP",
           "cost": "500",
           "description": "vai criar a função de envio de redes",
           "id": "56b242cf-16ab-4f5d-a5d0-a59e0969d32e"
-        },
-        {
-          "name": "Contratar dev Python",
-          "cost": "502",
-          "description": "vai criar a função de python",
-          "id": "c21218a4-0821-4a85-90ea-cbe18bff6089"
         }
       ]
     }
