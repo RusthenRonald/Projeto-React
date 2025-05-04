@@ -85,7 +85,8 @@ function Project(){
         if(newCost>parseFloat(project.budget)){
             setMessage("Orçamento ultrapassado, verifique o valor do serviço")
             setType('error')
-            
+            project.services.pop()
+            return false //termina execução
         }
     }
 
