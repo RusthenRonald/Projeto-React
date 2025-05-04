@@ -6,6 +6,7 @@ import Loading from '../Layout/Loading'
 import Container from '../Layout/Container'
 import ProjectForm from '../project/ProjectForm'
 import Message from "../Layout/Message"
+import ServiceCard from "../Services/ServiceCard"
 import ServiceForm from '../Services/ServiceForm'
 
 function Project(){
@@ -14,6 +15,7 @@ function Project(){
     console.log(id)
 
     const [project,setProject]=useState([])
+    const [services,setServices]=useState([])
     const [showProjectForm, setShowProjectForm] = useState(false)
     const [showServiceForm,setShowServiceForm] = useState(false)
     const [message,setMessage] = useState()
@@ -29,6 +31,7 @@ function Project(){
             }).then((resp)=>resp.json())
             .then((data)=>{
                 setProject(data)
+                setServices(data.services)
                 console.log(data)
             })
             .catch((err)=>console.log(err))
@@ -153,7 +156,19 @@ function Project(){
 
                         <h2>Serviços</h2>
                         <Container customClass="start">
-                                <p>Itens de serviços</p>
+                                {services.length >0 &&
+                                    services.map((service)=>(
+                                        <ServiceCard
+                                        id = {service.id}
+                                        name = {service.name}
+                                        cost = {service.cost}
+                                        description = {service.description}/>
+                                    ))
+                                }
+                                    
+                                {services.length ==0 &&
+                                    <p>Não há serviços </p>
+                                }
                         </Container>
 
                     </Container>
