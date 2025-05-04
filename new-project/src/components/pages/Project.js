@@ -91,6 +91,15 @@ function Project(){
 
         //add service cost to project total cost
         project.cost=newCost
+
+        fetch(`http://localhost:5000/projects${project.id}`,{
+            method:"PATCH",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify(project)
+        }
+        )
     }
 
     return(
