@@ -10,7 +10,7 @@ function ServiceForm({handleSubmit,btnText,projectData}){
     function submit(e){
         e.preventDefault()
         projectData.services.push(service)//está adicionando o objeto service (preenchido no formulário) ao array services dentro do objeto projectData.
-
+        handleSubmit(projectData)
     }
 
     function handleChange(e){

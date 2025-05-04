@@ -1,4 +1,5 @@
 import styles from './Project.module.css'
+import {parse,v4 as uuidv4} from "uuid"
 import { useParams } from 'react-router-dom'
 import { useState ,useEffect} from 'react'
 import Loading from '../Layout/Loading'
@@ -69,8 +70,11 @@ function Project(){
         setShowServiceForm(!showServiceForm)
     }
 
-    function createService(){
-        
+    function createService(project){
+        //last service
+        const lastService = project.services[project.services.lenght -1]//ultimo item
+
+
     }
 
     return(
