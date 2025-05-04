@@ -73,8 +73,16 @@ function Project(){
         setShowServiceForm(!showServiceForm)
     }
 
-    function removeService(){
+    function removeService(id,cost){
 
+        const servicesUpdate=project.services.filter(
+            (service)=> service.id !== id//serviço que quero remover
+        )
+
+        const projectUpdated = project
+
+        projectUpdated.services=servicesUpdate
+        //vao receber um array com apenas os ids que nao quero remover
     }
 
     function createService(project){
