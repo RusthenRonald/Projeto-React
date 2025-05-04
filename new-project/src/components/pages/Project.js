@@ -88,6 +88,9 @@ function Project(){
             project.services.pop()
             return false //termina execução
         }
+
+        //add service cost to project total cost
+        project.cost=newCost
     }
 
     return(
