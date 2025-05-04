@@ -19,8 +19,14 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
+      "cost": 200,
       "services": [
+        {
+          "name": "serviço dev",
+          "cost": "200",
+          "description": "algo",
+          "id": "09dd94ac-424a-46c0-9689-0c3fe1c5b1e0"
+        }
       ]
     }
   ],
