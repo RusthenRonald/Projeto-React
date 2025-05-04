@@ -81,7 +81,12 @@ function Project(){
         const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
         //somando o custo total atual do projeto com o custo do serviço novo, para atualizar o valor gasto no projeto (project.cost).
 
-
+        //maximum value validation
+        if(newCost>parseFloat(project.budget)){
+            setMessage("Orçamento ultrapassado, verifique o valor do serviço")
+            setType('error')
+            
+        }
     }
 
     return(
