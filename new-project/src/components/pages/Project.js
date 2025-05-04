@@ -205,7 +205,7 @@ function Project(){
                     </Container>
                 </div>
             ):(
-                <p><Loading/></p>
+                <Loading/>
             )}
         </>
     )
