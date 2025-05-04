@@ -72,7 +72,14 @@ function Project(){
 
     function createService(project){
         //last service
-        const lastService = project.services[project.services.lenght -1]//ultimo item
+        const lastService = project.services[project.services.length -1]//ultimo item
+
+        lastService.id ==uuidv4()//criando id para ultimo serviço da lista
+
+
+        const lastServiceCost =lastService.cost
+        const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
+        //somando o custo total atual do projeto com o custo do serviço novo, para atualizar o valor gasto no projeto (project.cost).
 
 
     }
