@@ -74,7 +74,7 @@ function Project(){
         //last service
         const lastService = project.services[project.services.length -1]//ultimo item
 
-        lastService.id ==uuidv4()//criando id para ultimo serviço da lista
+        lastService.id =uuidv4()//criando id para ultimo serviço da lista
 
 
         const lastServiceCost =lastService.cost
