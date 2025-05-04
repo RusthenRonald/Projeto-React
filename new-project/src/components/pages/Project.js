@@ -102,7 +102,7 @@ function Project(){
                             </button>{/*alterna form do projeto*/}
                             <div className={styles.project_info}>
                                 {showServiceForm && (
-                                    <div>Formulário do Serviço</div>
+                                    <ServiceForm/>
                                 )
                                 }
                             </div>
