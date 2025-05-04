@@ -73,6 +73,10 @@ function Project(){
         setShowServiceForm(!showServiceForm)
     }
 
+    function removeService(){
+
+    }
+
     function createService(project){
 
         setMessage('')
@@ -107,6 +111,7 @@ function Project(){
         .then((data)=>{
             //exibir os serviços
             console.log(data)
+            setShowServiceForm(false)
         })
         .catch((err)=>console.log(err))
     }
@@ -162,7 +167,9 @@ function Project(){
                                         id = {service.id}
                                         name = {service.name}
                                         cost = {service.cost}
-                                        description = {service.description}/>
+                                        description = {service.description}
+                                        key={service.id}
+                                        handleRemove={removeService}/>
                                     ))
                                 }
                                     
