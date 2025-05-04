@@ -7,7 +7,9 @@ function ServiceForm({handleSubmit,btnText,projectData}){
 
     const [service,setService] = useState({})
 
-    function submit(){
+    function submit(e){
+        e.preventDefault()
+        projectData.services.push(service)//está adicionando o objeto service (preenchido no formulário) ao array services dentro do objeto projectData.
 
     }
 
