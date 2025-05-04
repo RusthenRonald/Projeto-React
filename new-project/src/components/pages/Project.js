@@ -83,6 +83,15 @@ function Project(){
 
         projectUpdated.services=servicesUpdate
         //vao receber um array com apenas os ids que nao quero remover
+        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+        
+        fetch(`http://localhost:5000/projects/${projectUpdated.id}`,{
+            method:"PATCH",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(projectUpdated)
+        })
     }
 
     function createService(project){
