@@ -4,12 +4,15 @@ import Input from "../form/Input"
 import Submit from "../form/Submit"
 
 function ServiceForm({handleSubmit,btnText,projectData}){
+
+    const [service,setService] = useState({})
+
     function submit(){
 
     }
 
     function handleChange(e){
-
+        setService({...service, [e.target.name] : e.target.value})
     }
     return (
         <form action="" className={styles.form} onSubmit={submit}>

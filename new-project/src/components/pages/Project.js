@@ -34,13 +34,6 @@ function Project(){
         },300)
     },[id])
 
-    function toggleProjectForm(){
-        setShowProjectForm(!showProjectForm)
-    }
-    function toggleServiceForm(){
-        setShowServiceForm(!showServiceForm)
-    }
-
     function editPost(project){
 
         setMessage("")//reinicia estado pra nao dar erro devido o mesmo nome
@@ -67,6 +60,17 @@ function Project(){
             setType('sucess')
         })
         .catch(err=>console.log(err))
+    }
+
+    function toggleProjectForm(){
+        setShowProjectForm(!showProjectForm)
+    }
+    function toggleServiceForm(){
+        setShowServiceForm(!showServiceForm)
+    }
+
+    function createService(){
+        
     }
 
     return(
@@ -103,7 +107,10 @@ function Project(){
                             </button>{/*alterna form do projeto*/}
                             <div className={styles.project_info}>
                                 {showServiceForm && (
-                                    <ServiceForm/>
+                                    <ServiceForm handleSubmit={createService}
+                                    btnText="Adicionar Serviço"
+                                    projectData={project}
+                                    />
                                 )
                                 }
                             </div>
