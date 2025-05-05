@@ -1,6 +1,7 @@
 {
   "name": "new-project",
   "version": "0.1.0",
+  "homepage": "https://rusthenronald.github.io/new-project",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
