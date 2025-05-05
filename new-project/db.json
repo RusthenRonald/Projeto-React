@@ -8,24 +8,31 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 0,
-      "services": []
+      "cost": 350,
+      "services": [
+        {
+          "name": "Novo Serviço ",
+          "cost": "350",
+          "description": "teste descrição",
+          "id": "ed462db7-71a2-4879-b5e7-f6420a859504"
+        }
+      ]
     },
     {
-      "id": "75b5",
-      "name": "Curso Dev Sênior",
+      "id": "c410",
+      "name": "Novo Projeto",
       "budget": "2000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 500,
+      "cost": 350,
       "services": [
         {
-          "name": "Contratar dev PHP",
-          "cost": "500",
-          "description": "vai criar a função de envio de redes",
-          "id": "56b242cf-16ab-4f5d-a5d0-a59e0969d32e"
+          "name": "Novo Serviço",
+          "cost": "350",
+          "description": "teste de descrição",
+          "id": "aed2459c-213d-4f80-a0d8-478eda147b30"
         }
       ]
     }
