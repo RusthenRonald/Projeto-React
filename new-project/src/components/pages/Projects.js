@@ -4,7 +4,7 @@ import Message from "../Layout/Message"
 import Container from '../Layout/Container'
 import LinkButton from '../Layout/LinkButton'
 import ProjectCard from "../project/ProjectCard"
-import Loading from "../Layout/Loading"
+import Loading from "../Layout/loadin_temp"
 import {useState,useEffect} from "react"
 
 function Projects (){
