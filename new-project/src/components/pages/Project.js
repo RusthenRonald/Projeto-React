@@ -185,7 +185,7 @@ function Project(){
 
                         <h2>Serviços</h2>
                         <Container customClass="start">
-                                {services.length === 0 &&
+                                {services.length >0 &&
                                     services.map((service)=>(
                                         <ServiceCard
                                         id = {service.id}
@@ -197,7 +197,7 @@ function Project(){
                                     ))
                                 }
                                     
-                                {services.length ==0 &&
+                                {services.length === 0 &&
                                     <p>Não há serviços </p>
                                 }
                         </Container>
