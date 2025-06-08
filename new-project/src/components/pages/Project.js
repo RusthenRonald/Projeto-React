@@ -1,6 +1,6 @@
 import styles from './Project.module.css'
-import {parse,v4 as uuidv4} from "uuid"
-import { data, useParams } from 'react-router-dom'
+import {v4 as uuidv4} from "uuid"
+import { useParams } from 'react-router-dom'
 import { useState ,useEffect} from 'react'
 import Loading from '../Layout/Loading'
 import Container from '../Layout/Container'
@@ -185,7 +185,7 @@ function Project(){
 
                         <h2>Serviços</h2>
                         <Container customClass="start">
-                                {services.length >0 &&
+                                {services.length === 0 &&
                                     services.map((service)=>(
                                         <ServiceCard
                                         id = {service.id}

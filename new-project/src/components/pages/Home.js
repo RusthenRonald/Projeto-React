@@ -7,7 +7,7 @@ function Home(){
             <h1>Bem-vindo ao <span>Costs</span></h1>
             <p>Comece a gerenciar os seus projetos agora mesmo!</p>
             <LinkButton to='NewProject' text='Criar Projeto' />
-            <img src={savings}></img>
+            <img src={savings} alt='imagem cofrinho'></img>
         </section>
     )
 }export default Home
