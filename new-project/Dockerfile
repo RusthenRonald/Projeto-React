@@ -1,21 +1,34 @@
-#Start with Node.js image 
-FROM node:18-alpine
+# ========== STAGE 1: BUILD ==========
 
-#Set where code runs inside container 
+# Build the React app
+FROM node:18-alpine AS build
+
 WORKDIR /app
 
-# Copy package files from your computer to container
+# Copy and install dependencies
 COPY package*.json ./
+RUN npm install
 
-#install all npm dependencies
-RUN npm install 
-
-# Copy all your project files
+# Copy all code
 COPY . .
 
-# Tell Docker this container uses port 5000
-EXPOSE 5000
+# Build optimized React app
+RUN npm run build 
 
-# Command to run when container starts
-CMD ["npm", "run", "backend"]
+# ========== STAGE 2: PRODUCTION ==========
 
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Install 'serve' - lightweight web server
+RUN npm install -g serve
+
+# Copy built app from stage 1
+COPY --from=build /app/build ./build
+
+# Port for frontend
+EXPOSE 3000
+
+#Run the app
+CMD ["serve", "-s", "build", "-l", "3000"]
