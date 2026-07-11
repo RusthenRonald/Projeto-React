@@ -8,6 +8,7 @@ import ProjectForm from '../project/ProjectForm'
 import Message from "../Layout/Message"
 import ServiceCard from "../Services/ServiceCard"
 import ServiceForm from '../Services/ServiceForm'
+import API_URL from '../../api'
 
 function Project(){
     //pegando id pela url
@@ -23,7 +24,7 @@ function Project(){
 
     useEffect(()=>{
         setTimeout(()=>{
-            fetch(`http://localhost:5000/projects/${id}`,{
+            fetch(`${API_URL}/projects/${id}`,{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json"
@@ -49,7 +50,7 @@ function Project(){
             setType('error')
             return false //parar projeto
         }
-        fetch(`http://localhost:5000/projects/${project.id}`,{
+        fetch(`${API_URL}/projects/${project.id}`,{
             method:"PATCH",//altera só qoue foi mudado
             headers:{
                 "Content-Type":"application/json"
@@ -85,7 +86,7 @@ function Project(){
         //vao receber um array com apenas os ids que nao quero remover
         projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
         
-        fetch(`http://localhost:5000/projects/${projectUpdated.id}`,{
+        fetch(`${API_URL}/projects/${projectUpdated.id}`,{
             method:"PATCH",
             headers:{
                 "Content-Type":"application/json"
@@ -125,7 +126,7 @@ function Project(){
         //add service cost to project total cost
         project.cost=newCost
 
-        fetch(`http://localhost:5000/projects/${project.id}`,{
+        fetch(`${API_URL}/projects/${project.id}`,{
             method:"PATCH",
             headers:{
                 "Content-type":"application/json"

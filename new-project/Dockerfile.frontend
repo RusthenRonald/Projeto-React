@@ -12,8 +12,13 @@ RUN npm install
 # Copy all code
 COPY . .
 
+# Backend URL baked into the build (CRA reads REACT_APP_* at build time).
+# Default points at the deployed backend; Render can override via build arg / env var.
+ARG REACT_APP_API_URL=https://costs-backend-esgl.onrender.com
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
+
 # Build optimized React app
-RUN npm run build 
+RUN npm run build
 
 # ========== STAGE 2: PRODUCTION ==========
 

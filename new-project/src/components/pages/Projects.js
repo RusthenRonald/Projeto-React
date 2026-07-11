@@ -6,6 +6,7 @@ import LinkButton from '../Layout/LinkButton'
 import ProjectCard from "../project/ProjectCard"
 import Loading from "../Layout/Loading"
 import {useState,useEffect} from "react"
+import API_URL from "../../api"
 
 function Projects (){
     
@@ -15,7 +16,7 @@ function Projects (){
 
     //Envia um DELETE para o servidor com o id do projeto que quer excluir.
     function removeProject(id){
-        fetch(`http://localhost:5000/projects/${id}`,{
+        fetch(`${API_URL}/projects/${id}`,{
             method:'DELETE',
             headers:{
                 'Content-Type':'application/json'
@@ -33,7 +34,7 @@ function Projects (){
     useEffect(()=>{
     
         setTimeout(()=>{
-            fetch("http://localhost:5000/projects",
+            fetch(`${API_URL}/projects`,
                 {
                     method:"GET",
                     headers:{

@@ -1,6 +1,7 @@
 import {useNavigate} from 'react-router-dom'
 import styles from './NewProject.module.css'
 import ProjectForm from '../project/ProjectForm'
+import API_URL from '../../api'
 function NewProject(){
 
     const navigate =useNavigate()//permite que o usuário seja redirecionado para outra página depois de criar um projeto.
@@ -9,7 +10,7 @@ function NewProject(){
         project.cost= 0
         project.services= []
 
-        fetch("http://localhost:5000/projects",{
+        fetch(`${API_URL}/projects`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

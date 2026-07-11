@@ -3,13 +3,14 @@ import styles from './ProjectForm.module.css'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import Submit from '../form/Submit'
+import API_URL from '../../api'
 function ProjectForm({btntext,handleSubmit,projectData}){
 
     const [categories,setCategories]=useState([])
     const [project,setProject]=useState(projectData||{})
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories', {
+        fetch(`${API_URL}/categories`, {
             method: 'GET',
             headers: { "Content-Type": "application/json" }
         })
