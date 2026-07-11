@@ -4,11 +4,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4em;
+    padding: 4em 2em;
 }
 .home_container h1{
     font-size: 2.5em;
     margin-bottom: 0.5em;
+    text-align: center;
 }
 .home_container span{
     background-color: #222;
@@ -18,8 +19,61 @@
 .home_container p{
     color: #7b7b7b;
     margin-bottom: 1.5em;
+    text-align: center;
+    max-width: 600px;
 }
 .home_container img{
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     margin: 2em 0;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .home_container {
+        padding: 2.5em 1.5em;
+    }
+    .home_container h1 {
+        font-size: 2em;
+    }
+    .home_container img {
+        max-width: 280px;
+        margin: 1.5em 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .home_container {
+        padding: 2em 1.2em;
+    }
+    .home_container h1 {
+        font-size: 1.8em;
+        margin-bottom: 0.8em;
+    }
+    .home_container p {
+        font-size: 0.95em;
+        margin-bottom: 1.2em;
+    }
+    .home_container img {
+        max-width: 240px;
+        margin: 1.5em 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .home_container {
+        padding: 1.5em 1em;
+    }
+    .home_container h1 {
+        font-size: 1.4em;
+        margin-bottom: 0.8em;
+    }
+    .home_container p {
+        font-size: 0.9em;
+        margin-bottom: 1.5em;
+    }
+    .home_container img {
+        max-width: 180px;
+        margin: 1.2em 0;
+    }
 }

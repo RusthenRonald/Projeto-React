@@ -2,8 +2,8 @@
     padding: 1em;
     border: 1px solid #7a7a7a;
     border-radius: 5px;
-    width: 24%;
-    margin: 0.5%;
+    flex: 0 1 calc(25% - 16px);
+    margin: 8px;
 }
 .project_card h4{
     background-color: #222;
@@ -75,4 +75,87 @@
 .project_card_actions button:hover{
     background-color: #222;
     color: #ffbb33;
+}
+
+@media (max-width: 1024px) {
+    .project_card {
+        flex: 0 1 calc(33.333% - 16px);
+        margin: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project_card {
+        flex: 0 1 calc(50% - 16px);
+        margin: 8px;
+    }
+    .project_card h4 {
+        font-size: 1.1em;
+        padding: 0.3em;
+    }
+    .project_card p {
+        font-size: 0.95em;
+        margin-bottom: 0.8em;
+    }
+    .project_card_actions a,
+    .project_card_actions button {
+        font-size: 0.85em;
+        padding: 0.5em 0.8em;
+    }
+}
+
+@media (max-width: 600px) {
+    .project_card {
+        flex: 0 1 100%;
+        margin: 8px;
+        padding: 0.8em;
+    }
+    .project_card h4 {
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
+    .project_card p {
+        font-size: 0.9em;
+        margin-bottom: 0.8em;
+    }
+    .project_card_actions {
+        flex-direction: row;
+        gap: 0.5em;
+    }
+    .project_card_actions a,
+    .project_card_actions button {
+        font-size: 0.8em;
+        padding: 0.5em 0.6em;
+        margin-right: 0;
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .project_card {
+        flex: 0 1 100%;
+        margin: 8px;
+        padding: 0.75em;
+    }
+    .project_card h4 {
+        font-size: 0.95em;
+        margin-bottom: 0.8em;
+    }
+    .project_card p {
+        font-size: 0.85em;
+        margin-bottom: 0.6em;
+    }
+    .project_card_actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.4em;
+    }
+    .project_card_actions a,
+    .project_card_actions button {
+        width: 100%;
+        font-size: 0.8em;
+        padding: 0.5em;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
 }
