@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # ========== BACKEND SERVICE ==========
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "5000:5000"  # your-port:container-port
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./db.json:/app/db.json  # Keep data between restarts
+    container_name: costs-backend
+
+ # ========== FRONTEND SERVICE ==========
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend  # Start backend first
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+    container_name: costs-frontend
+
+volumes:
+  db-data:
