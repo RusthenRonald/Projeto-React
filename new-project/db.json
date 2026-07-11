@@ -17,24 +17,6 @@
           "id": "ed462db7-71a2-4879-b5e7-f6420a859504"
         }
       ]
-    },
-    {
-      "id": "c410",
-      "name": "Novo Projeto",
-      "budget": "2000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 350,
-      "services": [
-        {
-          "name": "Novo Serviço",
-          "cost": "350",
-          "description": "teste de descrição",
-          "id": "aed2459c-213d-4f80-a0d8-478eda147b30"
-        }
-      ]
     }
   ],
   "categories": [
